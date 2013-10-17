@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Welcome Back, <%= @user.name %> </h1>
+    <h3>Your skills </h3>
+    <% @my_skills.each do |x| %>
+    <%= x.skill.name %><br/><br/><hr>
+    <% end %>
+  <form action = "/skill_update" method="post">
+    <h3> Change skills</h3>
+  <% @skills.each do |x| %>
+  <input type="radio"><%= x.name %><br/>
+  <% end %>
+  <input type="submit" value="Save Changes" >
+</form>
+</div>
